@@ -19,17 +19,17 @@ Before you begin, make sure you have the following installed:
 ### 1. Clone this Repository
   Clone the repository to your local machine:
   git clone https://github.com/your-username/ai-music-generator-leap.git
-    cd ai-music-generator-leap
+    - cd ai-music-generator-leap
 ### 2. Install Dependencies
   Run the following command to install the necessary dependencies:
-    npm install
+    - npm install
 ### 3. Set Up Environment Variables
   Create a .env file in the root directory of the project and add the following environment variable:
-    LEAP_API_KEY=<paste-your-token-here>
+    - LEAP_API_KEY=<paste-your-token-here>
   Retrieve your API key from your Leap AI account settings.
 ### 4. Running the Application
   Run the application in development mode:
-    npm run dev
+    - npm run dev
 
 Visit http://localhost:3000 in your browser to start generating music!
 
