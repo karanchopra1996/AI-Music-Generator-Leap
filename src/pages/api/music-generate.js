@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     try {
         const { prompt } = req.body;
         // Submit music generation
-        const { data, error } = await leap.music.submitMusicGenerationJob({
+        const { data, error } = await leap.music.generate({
             prompt: prompt,
             duration: 16,
             mode: "music",
@@ -15,7 +15,7 @@ export default async function handler(req, res) {
         console.log("OUTPUT ", output[output.length - 1], err);
         let song = output[output.length - 1];
         // Check if the music is generated or not
-        while (song.state !== "finished") {
+        while (song.state !== "completed") {
             // Wait every 15 seconds
             await new Promise((resolve) => setTimeout(resolve, 15000));
             if (song.state === "failed") {
